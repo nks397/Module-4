@@ -1,8 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./styles.css"
 import App from "./App"
-import {ThemeProvider} from "./themeContext"
+import {BrowserRouter as Router} from "react-router-dom"
+import "./styles.css"
 
-
-ReactDOM.render(<ThemeProvider><App /></ThemeProvider>, document.getElementById("root"))
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>, 
+    document.getElementById("root")
+)
