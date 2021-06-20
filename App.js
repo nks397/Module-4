@@ -4,20 +4,36 @@ import Categories from "./categories/Categories"
 import About from "./About"
 import {Link, Switch, Route} from "react-router-dom"
 
+
 function App() {  
 
     return (
         <div>
             <nav>
+            <h3 className="home">
                 <Link to="/">Home</Link>
+                </h3>
+                <h3 className="categories">
                 <Link to="/categories">Categories</Link>
+                </h3>
+                <h3 className="about">
                 <Link to="/about">About</Link>
+            </h3>
             </nav>
-        <Switch>
-            <Route exact path="/"><Home /></Route>
-            <Route path="/categories"><Categories /></Route>
-            <Route path="/about"><About /></Route>
-        </Switch>
+            <main>
+                <Switch>
+                    <Route exact path="/"><Home /></Route>
+                    <Route path="/categories"><Categories /></Route>
+                    <Route path="/about"><About /></Route>
+                </Switch>
+            </main>    
+            <footer>
+                <h2 className="facebook"><i class="fab fa-facebook-square"></i></h2> 
+                <h2 className="twitter"><i class="fab fa-twitter-square"></i></h2>
+                <h2 className="instagram"><i class="fab fa-instagram-square"></i></h2>
+                <h2 className="tumblr"><i class="fab fa-tumblr-square"></i></h2>
+                <h2 className="reddit"><i class="fab fa-reddit-square"></i></h2>
+            </footer>
         </div>
     )
 }

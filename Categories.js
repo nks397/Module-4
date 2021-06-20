@@ -6,11 +6,20 @@ import Sports from "./Sports"
 
 function Categories() {
     return(
-        <div>
-            <Link to="/categories/film">Film</Link>
-            <Link to="/categories/music">Music</Link>
-            <Link to="/categories/sports">Sports</Link>
-
+        <div className="category-container">
+            <h3 className="category-title">Choose your category</h3>
+            <div className="category-list">
+                <h3 className="film">
+                <Link to="/categories/film"><i class="fas fa-film"></i> Film</Link>
+                </h3>
+                <h3 className="music">
+                <Link to="/categories/music"><i class="fas fa-music"></i> Music</Link>
+                </h3>
+                <h3 className="sports">
+                <Link to="/categories/sports"><i class="fas fa-football-ball"></i> Sports</Link>
+                </h3>
+                <hr/>
+            </div>
         <Switch>
             <Route path="/categories/film"><Film /></Route>
             <Route path="/categories/music"><Music /></Route>
